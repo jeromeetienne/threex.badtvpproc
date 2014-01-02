@@ -10,22 +10,22 @@ You can see more of the good stuff what he does on
 
 Show Don't Tell
 ===============
-* [examples/demo.html](http://jeromeetienne.github.io/threex.badtv/examples/demo.html)
-\[[view source](https://github.com/jeromeetienne/threex.badtv/blob/master/examples/demo.html)\] :
+* [examples/demo.html](http://jeromeetienne.github.io/threex.badtvpproc/examples/demo.html)
+\[[view source](https://github.com/jeromeetienne/threex.badtvpproc/blob/master/examples/demo.html)\] :
 It show a full featured demo using each aspect of this extension.
 It uses require.js too.
-* [examples/basic.html](http://jeromeetienne.github.io/threex.badtv/examples/basic.html)
-\[[view source](https://github.com/jeromeetienne/threex.badtv/blob/master/examples/basic.html)\] :
+* [examples/basic.html](http://jeromeetienne.github.io/threex.badtvpproc/examples/basic.html)
+\[[view source](https://github.com/jeromeetienne/threex.badtvpproc/blob/master/examples/basic.html)\] :
 It shows this feature, and that one which is coded like that.
-* [examples/sound.html](http://jeromeetienne.github.io/threex.badtv/examples/sound.html)
-\[[view source](https://github.com/jeromeetienne/threex.badtv/blob/master/examples/sound.html)\] :
+* [examples/sound.html](http://jeromeetienne.github.io/threex.badtvpproc/examples/sound.html)
+\[[view source](https://github.com/jeromeetienne/threex.badtvpproc/blob/master/examples/sound.html)\] :
 It show up the 'jam the tv' effect. It animate ```threex.badtvpasses.js``` thru various 
 random steps, thus it appears as a broken tv set. Additionally it use a 
 [electric sound](http://www.freesound.org/people/Bekir_VirtualDJ/sounds/132834/)
 from
 [freesound](http://www.freesound.org/) and use ```threex.badtvsound.js``` to play it thru webaudio API.
-* [examples/felixturner_badtv.html](http://jeromeetienne.github.io/threex.badtv/examples/felixturner_badtv.html)
-\[[view source](https://github.com/jeromeetienne/threex.badtv/blob/master/examples/felixturner_badtv.html)\] :
+* [examples/felixturner_badtv.html](http://jeromeetienne.github.io/threex.badtvpproc/examples/felixturner_badtv.html)
+\[[view source](https://github.com/jeromeetienne/threex.badtvpproc/blob/master/examples/felixturner_badtv.html)\] :
 It show the original demo from [@felixturner](https://twitter.com/felixturner).
 
 How To Install It
@@ -46,11 +46,8 @@ bower install threex.badtv
 How To Use It
 =============
 
-there is no real use as it is only a boilerplate for your own extension.
+Here is the split out of each javascript files
 
-```javascript
-var instance	= new THREEx.Sample()
-```
 
 threex.badtvpasses.js
 =====================
