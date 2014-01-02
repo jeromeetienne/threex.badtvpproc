@@ -79,25 +79,9 @@ require([ '../package.require.js'
 
 	window.AudioContext	= window.AudioContext || window.webkitAudioContext;
 	var context		= new AudioContext()
-	var badTVSound		= new THREEx.BadTVSound(context, context.destination)
-
+	var badTVJamming	= new THREEx.BadTVJamming(badTVPasses, context)
 	document.querySelector('canvas').addEventListener('click', function(){
-		badTVPasses.params.randomize()
-		badTVPasses.onParamsChange()
-		// NOTE: assume a given badTVPasses
-		badTVSound.tweenDelay	= 0.1
-		var nShakeSteps		= 30
-
-		badTVSound.play()
-		badTVPasses.addEventListener('tweenCompleted', function callback(){
-			nShakeSteps	-= 1;
-			if( nShakeSteps > 0 )	badTVPasses.params.randomize()
-			else{
-				badTVPasses.params.reset()
-				badTVPasses.removeEventListener('tweenCompleted', callback)
-			}
-			badTVPasses.onParamsChange()		
-		})		
+		badTVJamming.trigger()
 	})
 
 	//////////////////////////////////////////////////////////////////////////////////

@@ -13,6 +13,7 @@
 <script src="../shaders/StaticShader.js"></script>
 <script src="../threex.badtvpasses.js"></script>
 <script src="../threex.badtvsound.js"></script>
+<script src="../threex.badtvjamming.js"></script>
 <!-- include dat.gui -->
 <script src='vendor/three.js/examples/js/libs/dat.gui.min.js'></script>
 <script src="../threex.badtvdatgui.js"></script>
@@ -33,12 +34,6 @@
 	var material	= new THREE.MeshNormalMaterial();
 	var mesh	= new THREE.Mesh( geometry, material );
 	scene.add( mesh );
-	
-	onRenderFcts.push(function(delta, now){
-		// mesh.rotation.x += 1 * delta;
-		// mesh.rotation.y += 2 * delta;		
-	})
-	
 	
 	//////////////////////////////////////////////////////////////////////////////////
 	//		badTVPasses							//
@@ -69,25 +64,9 @@
 
 	window.AudioContext	= window.AudioContext || window.webkitAudioContext;
 	var context		= new AudioContext()
-	var badTVSound		= new THREEx.BadTVSound(context, context.destination)
-
+	var badTVJamming	= new THREEx.BadTVJamming(badTVPasses, context)
 	document.querySelector('canvas').addEventListener('click', function(){
-		badTVPasses.params.randomize()
-		badTVPasses.onParamsChange()
-		// NOTE: assume a given badTVPasses
-		badTVSound.tweenDelay	= 0.1
-		var nShakeSteps		= 30
-
-		badTVSound.play()
-		badTVPasses.addEventListener('tweenCompleted', function callback(){
-			nShakeSteps	-= 1;
-			if( nShakeSteps > 0 )	badTVPasses.params.randomize()
-			else{
-				badTVPasses.params.reset()
-				badTVPasses.removeEventListener('tweenCompleted', callback)
-			}
-			badTVPasses.onParamsChange()		
-		})		
+		badTVJamming.trigger()
 	})
 
 	//////////////////////////////////////////////////////////////////////////////////

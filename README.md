@@ -93,6 +93,24 @@ Everytime you render the scene, be sure to update it
 badTVPasses.update(delta, now)		
 ```
 
+threex.badtvjamming.js
+======================
+
+It provides a bad tv jamming effect with sound. 
+It depends on ```threex.badtvsound.js``` for the sound.
+First create the object.
+
+```
+var context   = new AudioContext()
+var badTVJamming  = new THREEx.BadTVJamming(badTVPasses, context)
+```
+
+When you want to trigger the effect, just do
+
+```
+badTVJamming.trigger()
+```
+
 threex.badtvsound.js
 ====================
 It plays a electical sound thru Web Audio API. It is used to simulate
