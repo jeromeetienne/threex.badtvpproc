@@ -8,30 +8,6 @@ of [@felixturner](https://twitter.com/felixturner).
 You can see more of the good stuff what he does on
 [his blog](http://www.airtightinteractive.com/news).
 
-Status: super early
-
-TODO
-====
-* create threex.badtvjam.js
-  * .trigger()
-* some shader are the same as in three.js distribution. DO NOT DUPLICATE code
-  * RGBShiftShader
-  * FilmShader
-* DONE do a bad tv demo with webaudio API sound
-  * find the sound on freesounds
-    * this one http://www.freesound.org/people/Bekir_VirtualDJ/sounds/132834/
-  * use tween.js for animation - i didnt
-* DONE externalize the ping in demo
-  * currently this is in dat.gui 
-* DONE change to BatTVPasses.params.badTV
-* DONE do an examples from threex boilerplate
-* DONE do threex.badtvdatgui.js 
-  * see threex.glowkeycolor.postprocdatgui.js or others
-* DONE how to update the time in the shader
-  * .update() function ?
-  * isnt it already done by composer ?
-
-
 Show Don't Tell
 ===============
 * [examples/demo.html](http://jeromeetienne.github.io/threex.badtv/examples/demo.html)
@@ -140,3 +116,11 @@ The typical usage is just:
 ```
 THREEx.addBadTVPasses2DatGui(badTVPasses)
 ```
+
+TODO
+====
+* some shader are the same as in three.js distribution. DO NOT DUPLICATE code
+  * RGBShiftShader
+  * FilmShader
+
+
