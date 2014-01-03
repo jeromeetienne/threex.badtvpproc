@@ -37,7 +37,6 @@ THREEx.BadTVPasses	= function(){
 
 		if( tweenStartDate !== null ){
 			var present	= Date.now()/1000
-console.log('tween dleta', present - tweenStartDate)
 			if( present - tweenStartDate >= this.tweenDelay ){
 				params.copy(tweenDstParams)
 				tweenStartDate = null
