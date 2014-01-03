@@ -15,7 +15,7 @@ THREEx.BadTVJamming	= function(badTVPasses, context, destination){
 		badTVPasses.onParamsChange()
 		// NOTE: assume a given badTVPasses
 		badTVSound.tweenDelay	= 0.1
-		var nShakeSteps		= 30
+		var nShakeSteps		= 12
 
 		badTVSound.play()
 

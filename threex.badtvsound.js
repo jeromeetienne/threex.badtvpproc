@@ -8,6 +8,7 @@ THREEx.BadTVSound	= function(context, destination, onLoad, onError){
 	var buffer	= null
 	// start loading the sound
 	var url		= THREEx.BadTVSound.baseUrl + 'sounds/132834__bekir-virtualdj__electric.mp3'
+	var url		= THREEx.BadTVSound.baseUrl + 'sounds/19487__halleck__jacobsladdersingle2.wav'
 	loadSoundWebAudio(url, function(decodedBuffer){
 		buffer	= decodedBuffer
 	}, onLoad, onError);
