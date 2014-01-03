@@ -30,7 +30,7 @@ THREEx.BadTVPasses	= function(){
 	//		comment								//
 	//////////////////////////////////////////////////////////////////////////////////
 
-	this.update	= function(delta, now){
+	this.update	= function(delta, now){ 
 		badTVPass.uniforms[ 'time' ].value	= now
 		filmPass.uniforms[ 'time' ].value	= now
 		staticPass.uniforms[ 'time' ].value	= now
