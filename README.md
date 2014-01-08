@@ -66,6 +66,12 @@ Everytime you render the scene, be sure to update it
 badTVPasses.update(delta, now)		
 ```
 
+Then you add those passes to an ```THREE.EffectComposer``` like that
+
+```
+badTVPasses.addPassesTo(composer)
+```
+
 threex.badtvjamming.js
 ======================
 
