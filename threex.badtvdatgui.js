@@ -20,14 +20,18 @@ THREEx.addBadTVPasses2DatGui	= function(badTVPasses, datGui){
 	//////////////////////////////////////////////////////////////////////////////////
 	//		comment								//
 	//////////////////////////////////////////////////////////////////////////////////
-	datGui.add({ randomize	: function(){
-		badTVPasses.params.randomize()
-		badTVPasses.onParamsChange()		
-	}}, 'randomize' )
-	datGui.add({ reset	: function(){
+	datGui.add({ presetReset	: function(){
 		badTVPasses.params.reset()
 		badTVPasses.onParamsChange()		
-	}}, 'reset' )
+	}}, 'presetReset' )
+	datGui.add({ presetLight	: function(){
+		badTVPasses.params.preset('light')
+		badTVPasses.onParamsChange()		
+	}}, 'presetLight' )
+	datGui.add({ presetStrong	: function(){
+		badTVPasses.params.preset('strong')
+		badTVPasses.onParamsChange()		
+	}}, 'presetStrong' )
 	datGui.add(badTVPasses, 'tweenDelay', 0, 2).step(0.1).listen().name("Tween Delay").onChange(onChange);
 
 	var f1 = datGui.addFolder('Bad TV');
@@ -35,6 +39,7 @@ THREEx.addBadTVPasses2DatGui	= function(badTVPasses, datGui){
 	f1.add(badTVParams, 'distortion2', 0.1, 20).step(0.1).listen().name("Fine Distort").onChange(onChange);
 	f1.add(badTVParams, 'speed', 0.0,1.0).step(0.01).listen().name("Distort Speed").onChange(onChange);
 	f1.add(badTVParams, 'rollSpeed', 0.0,1.0).step(0.01).listen().name("Roll Speed").onChange(onChange);
+	f1.add(badTVParams, 'randomSeed', 0.0,200.0).step(0.01).listen().name("Random Seed").onChange(onChange);
 	f1.open();
 
 	var f2 = datGui.addFolder('RGB Shift');

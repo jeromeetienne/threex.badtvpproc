@@ -9,7 +9,14 @@
 <script src="vendor/three.js/examples/js/shaders/CopyShader.js"></script>
 <!-- include dat.gui -->
 <script src='vendor/three.js/examples/js/libs/dat.gui.min.js'></script>
-<body style='margin: 0px; background-color: #bbbbbb; overflow: hidden;'><script>
+<body style='margin: 0px; background-color: #bbbbbb; overflow: hidden;'>
+<div style='position:absolute; left: 1em; top: 1em;'>
+	<span style='font-weight: bolder; color: blue;'>TV Jamming Presets:</span>
+	<button onclick='switchValue(this.innerHTML);'>lightNoScroll</button>
+	<button onclick='switchValue(this.innerHTML);'>strongScrolly</button>
+</div>
+<script>
+
 require([ '../package.require.js'
 	], function(){
 	var renderer	= new THREE.WebGLRenderer();
@@ -81,8 +88,13 @@ require([ '../package.require.js'
 	var context		= new AudioContext()
 	var badTVJamming	= new THREEx.BadTVJamming(badTVPasses, context)
 	document.querySelector('canvas').addEventListener('click', function(){
-		badTVJamming.trigger()
+		badTVJamming.preset('lightNoScroll')
+// TODO put 2 input button for jamming effect
 	})
+	
+	window.switchValue	= function(value){
+		badTVJamming.preset(value)
+	}
 
 	//////////////////////////////////////////////////////////////////////////////////
 	//		render the scene						//
