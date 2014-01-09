@@ -18,7 +18,8 @@ THREEx.BadTVJamming	= function(badTVPasses, context, destination){
 	this.inProgress	= false
 	this.trigger	= function(passesFirstLabel, passesLastLabel, nShakeSteps, tweenDelay){
 		// default values for arguments
-		console.assert( typeof(presetLabel) === 'string' )
+		console.assert( typeof(passesFirstLabel) === 'string' )
+		console.assert( typeof(passesLastLabel) === 'string' )
 		console.assert( typeof(nShakeSteps) === 'number' )
 		console.assert( typeof(tweenDelay) === 'number' )
 		// prevent another trigger when a jamming is in progress
