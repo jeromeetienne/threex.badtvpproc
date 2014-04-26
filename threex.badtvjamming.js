@@ -5,6 +5,15 @@
 var THREEx	= THREEx || {};
 
 
+/**
+ * BadTV Jamming effect
+ * 
+ * @constructor
+ * 
+ * @param {THREEx.BadTVPasses} badTVPasses 
+ * @param {[type]} context     [description]
+ * @param {[type]} destination [description]
+ */
 THREEx.BadTVJamming	= function(badTVPasses, context, destination){
 	destination	= destination	|| context.destination
 	

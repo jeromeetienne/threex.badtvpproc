@@ -37,12 +37,14 @@
 	//		badTVPasses							//
 	//////////////////////////////////////////////////////////////////////////////////
 	
+	// create a bad tv
 	var badTVPasses	= new THREEx.BadTVPasses();
 	onRenderFcts.push(function(delta, now){
 		badTVPasses.update(delta, now)		
 	})
+	// add a dat.gui to help you find the tunning which fit your needs
 	THREEx.addBadTVPasses2DatGui(badTVPasses)
-	
+
 	// randomize it to make it funnier	
 	badTVPasses.params.randomize()
 
